@@ -17,4 +17,20 @@ document.querySelectorAll('.game-square').forEach(square => {
             } else if (!board.includes('')) { // Check if the board is full and it's a tie
                 displayTie(); // Display a tie message 
                 isGameActive = false; // Set the game to inactive 
-                
+            } else { // Switch turns if no winner and no tie
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; // Toggle between 'X' and 'O'
+                document.getElementById('turn').textContent = currentPlayer; // Update the displayed turn
+            }
+        }
+    });
+});
+function updateBoard(square) { // Function to update the board array   
+    const index = Array.from(square.parentNode.children).indexOf(square); // Get the index of the clicked square
+    board[index] = currentPlayer; // Update the board array with the current player's symbol
+}
+
+} const winningCombinations = [ // Array of possible winning combinations 
+    [0, 1, 2], [3, 4, 5], [6, 7, 8], // Horizontal combinations 
+    [0, 3, 6], [1, 4, 7], [2, 5, 8], // Vertical combinations 
+    [0, 4, 8], [2, 4, 6] // Diagonal combinations
+];
