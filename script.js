@@ -8,3 +8,5 @@ document.getElementById('turn').textContent = currentPlayer; // Display the curr
 // Add event listeners to each game square
 document.querySelectorAll('.game-square').forEach(square => {
     square.addEventListener('click', function() { // When a square is clicked 
+        if (isGameActive && square.textContent === '') { // Check if the game is active and the square is empty
+            
