@@ -13,4 +13,5 @@ document.querySelectorAll('.game-square').forEach(square => {
             updateBoard(square); // Update the game board array with the current player's symbol 
             if (checkWinner()) { // Check if the current player has won
                 displayWinner(currentPlayer); // Display the winner 
-                isGameActive = false; // Set the game to inactive    
+                isGameActive = false; // Set the game to inactive 
+            } else if (!board.includes('')) { // Check if the board is full and it's a tie   
