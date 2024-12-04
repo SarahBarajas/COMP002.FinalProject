@@ -1,4 +1,4 @@
-
+document.addEventListener('DOMContentLoaded', function() { // Wait for the HTML to fully load before running the script
 let board = ['', '', '', '', '', '', '', '', '']; // Initialize the game board as an array of empty strings
 let currentPlayer = 'X'; // Set the starting player to 'X'
 let isGameActive = true; // Flag to check if the game is currently active
@@ -58,7 +58,7 @@ document.getElementById('button-play-again').addEventListener('click', function(
         currentPlayer = 'X'; // Set the starting player to 'X'
         document.getElementById('turn').textContent = currentPlayer; // Update the displayed turn
         document.querySelectorAll('.game-square').forEach(square =>
-            square.textContent = ''; // Clear all the game squares
+            square.textContent = ''); // Clear all the game squares
     });
 });
 
