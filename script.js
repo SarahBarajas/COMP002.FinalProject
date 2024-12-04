@@ -10,3 +10,4 @@ document.querySelectorAll('.game-square').forEach(square => {
     square.addEventListener('click', function() { // When a square is clicked 
         if (isGameActive && square.textContent === '') { // Check if the game is active and the square is empty
             square.textContent = currentPlayer; // Mark the square with the current player's symbol   
+            updateBoard(square); // Update the game board array with the current player's symbol 
