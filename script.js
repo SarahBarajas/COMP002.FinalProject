@@ -15,4 +15,6 @@ document.querySelectorAll('.game-square').forEach(square => {
                 displayWinner(currentPlayer); // Display the winner 
                 isGameActive = false; // Set the game to inactive 
             } else if (!board.includes('')) { // Check if the board is full and it's a tie
-                displayTie(); // Display a tie message  
+                displayTie(); // Display a tie message 
+                isGameActive = false; // Set the game to inactive 
+                
